@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+ 
+    <label lang="de">Detailseiten Erweiterung</label>
+ 
+    <version>1.0.1</version>
+    <author>Gwennyphar</author>
+    <copyright>(c) 2017 Gwennyphar | Shopware Developer</copyright>
+    <license>MIT</license>
+    <link>https://github.com/Gwennyphar/</link>
+    <description>Diese Plugin erweitert die Artikeldetailseite um versch. Werte und Funktionen.</description>
+    <compatibility minVersion="5.3.3" />
+ 
+    <changelog version="1.0.0">
+        <changes lang="en">Initial upload of plugin</changes>
+        <changes lang="de">Initialer Upload des Plugins</changes>
+    </changelog>
+    <changelog version="1.0.1">
+        <changes lang="en">Added plugin.xml file</changes>
+        <changes lang="de">Plugin.xml Datei wurde hinzugefügt</changes>
+    </changelog>
+</plugin>
