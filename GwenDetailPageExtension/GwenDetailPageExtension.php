@@ -34,7 +34,7 @@ class GwenDetailPageExtension extends \Shopware\Components\Plugin {
 		$context->scheduleClearCache($this->getCacheArray());
 		parent::install($context);
 	}
-	
+
 	/**
 	 * Get caches to clear
 	 *
@@ -61,14 +61,16 @@ class GwenDetailPageExtension extends \Shopware\Components\Plugin {
 	 * get article name from db
 	 */
 	 public function onFrontendDetail(\Enlight_Event_EventArgs $arguments) {
-		 $article_Id = 2;		 
+		 $articleId = 2;		 
 		 $view = $arguments->get('subject')->View();
 		 $query = $this->container->get('dbal_connection')->createQueryBuilder();
 		 $query->select('s_articles.name')
 			->from('s_articles')
 			->where('s_articles.id = :id')
-			->setParameter('id', $article_Id);
+			->setParameter('id', $articleId);
 		$single = $query->execute()->fetchColumn();
 		$view->assign('article_name', $single);
+		$categoryArticles = Shopware()->Modules()->Articles()->sGetArticlesByCategory($articleId, $criteria);
+		$view->assign('article_cat', $categoryArticles);	
 	}
 }//end class
