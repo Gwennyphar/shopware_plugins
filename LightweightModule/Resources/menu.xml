@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/menu.xsd">
+    <entries>
+        <entry>
+            <name>Lightweight Example</name>
+            <label lang="en">Lightweight Example</label>
+            <controller>Lightweight</controller>
+            <action>index</action>
+            <parent identifiedBy="controller">Marketing</parent>
+            <onclick>window.createSimpleModule("Lightweight", "Window-Title")</onclick>
+        </entry>
+    </entries>
+</menu>
